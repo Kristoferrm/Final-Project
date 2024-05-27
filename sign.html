@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign in</title>
+	<link rel="stylesheet" href="/src/css/sign.css">
+</head>
+<body>
+	<header class="header-container">
+        <div class="logo">
+           <a href="/index.html"><img src="/src/pictures/logo.jpg" alt="logo"></a> 
+        </div>
+        <nav>
+            <ul class="nav-bar">
+                <h1>Kristiania Gym</h1>       
+            </ul>
+        </nav>
+        <div>
+           
+            <a href="/index.html"><button>Log Out</button></a>
+        </div>
+    </header>
+
+	<div class="login">
+		<div class="form-box">
+			<h2>Login</h2>
+			<form class="sign-in-form">
+
+				<div class="input-box">
+					<label for="email">Email</label>
+					<input type="email" required>
+					<p class="email-error">Error</p>
+				</div>
+					
+				<div class="input-box">
+					<label for="password">Password</label>
+					<input type="password" required> 
+					<p class="password-error">Error</p>
+				</div>
+
+				<div class="remember-forgot">
+					<label><input type="checkbox">Remember me</label>
+					<a href="">Forgot Password?</a>
+				</div>
+
+				<button type="submit" class="btn">Login</button>
+				
+				<div class="login-register">
+					<p>Don´t have an account? <a href="" class="regiser-link">Register</a></p>
+				</div>
+				<p class="submission-error">Error</p>
+			</form>
+		</div>
+	</div>
+
+	
+
+
+	<script src="/dist/bundle.js"></script>
+</body>
+</html>
