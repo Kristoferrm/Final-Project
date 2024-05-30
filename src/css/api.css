@@ -148,3 +148,49 @@ li span{
 }
 
 
+.footer-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p,
+  .footer-section ul,
+  .footer-section li,
+  .footer-section a {
+    color: #ddd;
+    margin: 5px 0;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #fff;
+  }
+  
+  .footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  
+
