@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+    
+
+	<link rel="stylesheet" href="/src/css/api.css">
+</head>
+
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+	button{
+	  border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+	}
+	div{
+		display: flex;
+		flex-direction: row;
+		padding: 1rem;
+		border-collapse: collapse;
+      width: 100%;
+	}
+	.sort{
+		display: flex;
+		flex-direction: column;
+	}
+  </style>
+<body>
+	<header class="header-container">
+		<div class="logo">
+  
+		  <a href="/index.html"
+			><img src="/src/pictures/logo.jpg" alt="logo"
+		  /></a>
+		  
+		</div>
+		<nav>
+		  <ul class="header">
+			<h1>Personal Trainers</h1>
+
+			<div>
+				<div class="sort">
+					<h2>sort By id</h2>
+					<button id="sort-id-asc">Sort by ID⬆️  </button>
+					<button id="sort-id-desc">Sort by ID⬇️</button>
+				</div>
+
+				<div class="sort">
+					<h2>sort By id</h2>
+					<button id="sort-lastname-asc">Sort by Last Name⬆️</button>
+					<button id="sort-lastname-desc">Sort by Last Name⬇️</button>
+				</div>
+
+				<div class="sort">
+					<h2>sort By id</h2>
+					<button id="sort-firstname-asc">Sort by First Name⬆️</button>
+					<button id="sort-firstname-desc">Sort by First Name⬇️</button>
+				</div>
+
+				<div class="sort">
+					<h2>sort By id</h2>
+					<button id="sort-email-asc">Sort by Email⬆️</button>
+					<button id="sort-email-desc">Sort by Email⬇️</button>
+				</div>
+			</div>
+
+			<table id="api-data">
+			  <thead>
+				<tr>
+				  <th>ID</th>
+				  <th>Email</th>
+				  <th>First Name</th>
+				  <th>Last Name</th>
+				  <th>Avatar</th>
+				</tr>
+			  </thead>
+			  <tbody id="api-data-body">
+			  </tbody>
+			</table>
+			
+	
+	  
+
+	  <script src="/src/js/api.js"></script>
+
+</body>
+</html>

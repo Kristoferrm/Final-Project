@@ -1,62 +1,75 @@
-
-const validateSignInForm = (email, password, emailErrorElement, passErrorElement)=>{
+function validateSignInForm(email, password, emailError, passError) {
 	const errors = {
-		erreroStatus: false,
-		emailError: '',
-		passwordError: '',
-	}
-
-	if (!email && !password){
-
-			errors.erreroStatus = true,
-			errors.emailErrorElement = "Email is required!",
-			errors.passwordError = "Password is required!";
-
-			emailErrorElement.style.visibility = 'visible';
-			passErrorElement.style.visibility = 'visible';
-
-			emailErrorElement.textContent = errors.emailError;
-			passErrorElement.textContent = errors.passwordError;
-
-	} else if (!email){
-		errors.erreroStatus = true,
-			errors.emailErrorElement = "Email is required!",
-			errors.passwordError = "";
-
-			emailErrorElement.style.visibility = 'visible';
-			passErrorElement.style.visibility = '';
-
-			emailErrorElement.textContent = errors.emailError;
-			passErrorElement.textContent = errors.passwordError; 
-
-	} else if(!password){
-		errors.erreroStatus = true,
-			errors.emailErrorElement = "",
-			errors.passwordError = "Password is required!";
-
-			emailErrorElement.style.visibility = 'hidden';
-			passErrorElement.style.visibility = 'visible';
-
-			emailErrorElement.textContent = errors.emailError;
-			passErrorElement.textContent = errors.passwordError; 
-
+	  errorStatus: false,
+	  emailError: "",
+	  passwordError: "",
+	};
+	console.log(email);
+	if (!email && !password) {
+	  errors.errorStatus = true;
+	  errors.emailError = "Email is required";
+	  errors.passwordError = "Password is required";
+  
+	  emailError.style.visibility = "visible";
+	  passError.style.visibility = "visible";
+  
+	  emailError.textContent = errors.emailError;
+	  passError.textContent = errors.passwordError;
+	} else if (!email) {
+	  errors.errorStatus = true;
+	  errors.emailError = "Email is required";
+	  errors.passwordError = "";
+  
+	  emailError.style.visibility = "visible";
+	  passError.style.visibility = "hidden";
+	  emailError.textContent = errors.emailError;
+	  passError.textContent = errors.passwordError;
+	} else if (!password) {
+	  errors.errorStatus = true;
+	  errors.emailError = "";
+	  errors.passwordError = "Password is required";
+  
+	  emailError.style.visibility = "hidden";
+	  passError.style.visibility = "visible";
+  
+	  emailError.textContent = errors.emailError;
+	  passError.textContent = errors.passwordError;
 	} else {
-		errors.erreroStatus = true,
-			errors.emailErrorElement = "",
-			errors.passwordError = "";
-
-			emailErrorElement.style.visibility = 'hidden';
-			passErrorElement.style.visibility = 'hidden';
-
-			emailErrorElement.textContent = errors.emailError;
-			passErrorElement.textContent = errors.passwordError; 	
+	  errors.errorStatus = false;
+	  errors.emailError = "";
+	  errors.passwordError = "";
+  
+	  emailError.style.visibility = "hidden";
+	  passError.style.visibility = "hidden";
+  
+	  emailError.textContent = errors.emailError;
+	  passError.textContent = errors.passwordError;
 	}
+	const signInFormStatus = () => {
+	  return errors.errorStatus;
+	};
+	return { signInFormStatus };
+  }
+  
+  function removeErrorsOnInput(emailInput, passwordInput, emailError, passError) {
+  
+	emailInput.addEventListener("input", () => {
+	  if (emailInput.value.trim() === "") {
+		  emailError.style.visibility = "visible";
+	  } else {
+		  emailError.style.visibility = "hidden";
+	  }
+  });
+  
+  passwordInput.addEventListener("input", () => {
+	  if (passwordInput.value.trim() === "") {
+		  passError.style.visibility = "visible";
+	  } else {
+		  passError.style.visibility = "hidden";
+	  }
+  });
 	
-const signInFormStatus = ()=>{
-	return errors.erreroStatus
-}
-
-return { signInFormStatus}
-};
-
-export {validateSignInForm}
+  }
+  
+  export { validateSignInForm, removeErrorsOnInput };
+  
