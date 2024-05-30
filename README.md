@@ -6,3 +6,5 @@ Netlify: https://app.netlify.com/teams/kristoferrm/overview
 Github: https://github.com/Kristoferrm/assignment-1.git
 		https://github.com/Kristoferrm/assignment-2.git
 		https://github.com/Kristoferrm/assignment-3.git
+
+Firebase: https://console.firebase.google.com/project/final-project-63f26/firestore/databases/-default-/data/~2Ffolks~2F2AyWLA3d4BxztFrmrXfm
